@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Chaintech Networks</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/index.css') }}">
+
+    <script>
+        function loadIframe(url) {
+            var main = document.getElementById('main');
+            main.innerHTML = `<iframe src="${url}" frameBorder="0" title="Iframe" style="height:100vh;width:100%;"></iframe>`;
+        }
+    </script>
+
+
+</head>
+
+<body>
+    <header>
+
+        <div>
+            <ul>
+
+                <div>
+                    <li>
+                        <H1 class="head" style="color: rgb(194, 255, 194);">ChainTech Network</H1>
+                    </li>
+                </div>
+
+                <div>
+                    <li>
+                        <a href="#" onclick="loadIframe('/employees'); return false;">Employees</a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="loadIframe('/form'); return false;">Home</a>
+                    </li>
+                </div>
+
+
+            </ul>
+        </div>
+
+
+
+    </header>
+
+
+    <main>
+
+
+
+
+        <div class="main" id="main">
+            <iframe src="/form" width="100%" frameBorder="0" style="height:100vh;width:100%;">
+            </iframe>
+        </div>
+
+
+
+    </main>
+
+    <footer>
+        <p>Contact information: onnewyear@gmail.com</p>
+        <p> +91 8128176740</p>
+    </footer>
+</body>
+
+</html>

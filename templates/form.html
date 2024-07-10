@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chaintech</title>
+    <style>
+        form {
+    padding: 20px;
+    border: 1px solid black;
+}
+form label, form input, form select, form textarea {
+    display: block;
+    margin-bottom: 10px;
+
+}
+    </style>
+    <script>
+        $(document).ready(function(){
+        $("#myButton").click(function(){
+            $.ajax({
+                url: '/',
+                type: 'post',
+                success: function(response){
+                    console.log("yeesssss");
+                    if (response.redirect) {
+                        window.location.href = response.redirect;
+                    } else {
+                        console.log("nooooo");
+                    }
+                },
+            });
+        });
+        
+    });
+    </script>
+</head>
+<body>
+    <h1>Welcome!!!</h1>
+            <p>
+                This is a Registration page for for users at Chaintech Network Employees.
+            </p>
+            <form id="form" method="POST">
+    
+                <label for="empid">EmpID:</label>
+                <input type="text" name="empid" id="empid" >
+    
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" >
+    
+                <label for="date">Date Of Birth:</label>
+                <input type="date" id="date" name="date">
+    
+        
+                <label for="department">Department:</label>
+                <select id="department" name="department">
+                    <option selected disabled>Select a department</option>
+                    <option value="HR">HR</option>
+                    <option value="Operations">Operations</option>
+                    <option value="Finance">Finance</option>
+                    <option value="Marketing">Marketing</option>
+                    <option value="Sales">Sales</option>
+                    <option value="Admin">Admin</option>
+                </select>
+        
+                
+        
+                <label for="description">Address:</label>
+                <textarea id="description" name="description"></textarea>
+        
+                <button id="myButton" >Submit</button>
+            </form>
+</body>
+</html>

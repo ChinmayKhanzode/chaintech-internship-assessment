@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        /* Add any custom styling here */
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            font-size: 14px;
+
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+        }
+        .edit-button, .view-button {
+            padding: 4px 8px;
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+        }
+        .view-button {
+            background-color: #28a745;
+        }
+    </style>
+</head>
+<body>
+    <h1>Report</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>SrNo.</th>
+                <th>EmpID</th>
+                <th>Name</th>
+                <th>DOB</th>
+                <th>Department</th>
+                <th>Address</th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+            {% for transaction in all %}
+                <tr>
+                    <td>{{ transaction[0]}}</td>
+                    <td>{{ transaction[1]}}</td>
+                    <td>{{ transaction[2]}}</td>
+                    <td>{{ transaction[3]}}</td>
+                    <td>{{ transaction[4]}}</td>
+                    <td>{{ transaction[5]}}</td>
+
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+</body>
+</html>
