@@ -13,6 +13,7 @@ form label, form input, form select, form textarea {
 
 }
     </style>
+    
     <script>
         $(document).ready(function(){
         $("#myButton").click(function(){
@@ -31,6 +32,7 @@ form label, form input, form select, form textarea {
         });
         
     });
+
     </script>
 </head>
 <body>
@@ -38,16 +40,16 @@ form label, form input, form select, form textarea {
             <p>
                 This is a Registration page for for users at Chaintech Network Employees.
             </p>
-            <form id="form" method="POST">
+            <form name="form" id="form" method="POST">
     
                 <label for="empid">EmpID:</label>
-                <input type="text" name="empid" id="empid" >
+                <input type="text" name="empid" id="empid" required>
     
                 <label for="name">Name:</label>
-                <input type="text" name="name" id="name" >
+                <input type="text" name="name" id="name" required>
     
                 <label for="date">Date Of Birth:</label>
-                <input type="date" id="date" name="date">
+                <input type="date" id="date" name="date" required>
     
         
                 <label for="department">Department:</label>
@@ -64,7 +66,7 @@ form label, form input, form select, form textarea {
                 
         
                 <label for="description">Address:</label>
-                <textarea id="description" name="description"></textarea>
+                <textarea id="description" name="description" required></textarea>
         
                 <button id="myButton" >Submit</button>
             </form>
